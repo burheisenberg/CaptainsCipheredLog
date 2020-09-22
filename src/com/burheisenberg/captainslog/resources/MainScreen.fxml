@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane fx:id="mainBorderPane" xmlns="http://javafx.com/javafx"
+            fx:controller="com.burheisenberg.captainslog.MainController" xmlns:fx="http://javafx.com/fxml"
+            prefHeight="400.0" prefWidth="600.0">
+    <top>
+        <HBox spacing="10">
+            <padding>
+                <Insets topRightBottomLeft="10"/>
+            </padding>
+            <Button fx:id="newLogButton" text="New Log" onAction="#newLogScreen"/>
+            <Button fx:id="editLogButton" text="Edit" onAction="#editLogScreen"/>
+            <Button fx:id="deleteButton" text="Delete" onAction="#deleteLog"/>
+        </HBox>
+    </top>
+    <left>
+        <ListView fx:id="logsListView"/>
+    </left>
+    <center>
+        <VBox>
+            <TextArea fx:id="logsDetailsTextArea" VBox.vgrow="ALWAYS" wrapText="true" editable="false"/>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox spacing="10">
+            <padding>
+                <Insets top="10" bottom="10" left="10" right="10"/>
+            </padding>
+            <Label text="Date of the log: "/>
+            <Label fx:id="logsDateLabel"/>
+        </HBox>
+    </bottom>
+</BorderPane>
